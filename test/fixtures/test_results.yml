@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_run: 2018-05-20 10:29:18
+  name: MyString
+  result: MyString
+  response: MyString
+
+two:
+  time_run: 2018-05-20 10:29:18
+  name: MyString
+  result: MyString
+  response: MyString

@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  username: api-status
+  host: localhost
+  password: <%= ENV['API_STATUS_DB_PWD'] %>
+
+development:
+  <<: *default
+  database: api_status__dev
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: api_status__test
+
+production:
+  <<: *default
+  database: api_status__prod

@@ -1,0 +1,55 @@
+.status-top
+  .history-button.position-absolute= link_to "Logout", controller: :main, action: :logout
+  - if !session[:user_id].nil? && !User.find(session[:user_id]).nil? && User.find(session[:user_id]).admin
+    %span.admin-button= link_to "API Status", controller: :main, action: :index
+  .text-center
+    %h1.mb-3
+      Course Data API Status Admin
+.admin-container
+  .admin
+    %h3 Create New Notice
+    =form_for @notice, html: {class: 'form-inline'} do |f|
+      = f.text_field :title, placeholder: 'Title'
+      = f.select :severity, [["Info", "info"],["Success", "success"],["Warning","warning"],["Severe","danger"],["Disabled","dark"]]
+      = f.text_area :content, placeholder: 'Content'
+      = f.submit 'Create'
+    %h3 Current Notices
+    .table-responsive
+      %table.table
+        %tr
+          %th Title
+          %th Content
+          %th Created
+          %th Actions
+        - Notice.where(active: true).order(created_at: :desc).each do |notice|
+          %tr
+            %td= notice.title
+            %td= notice.content
+            %td= notice.created_at.strftime "%Y-%m-%d %H:%M:%S"
+            %td
+              =button_to 'Deactivate', {action: 'notice_deactivate', id: notice.id}, {method: :patch}
+        - if Notice.where(active: true).order(created_at: :desc).empty?
+          %tr
+            %td{colspan: 5}
+              %b No current notices to display.
+    %h3 Past Notices
+    .table-responsive
+      %table.table
+        %tr
+          %th Title
+          %th Content
+          %th Created
+          %th Deactivated
+          %th Actions
+        - Notice.where(active: false).order(created_at: :desc).each do |notice|
+          %tr
+            %td= notice.title
+            %td= notice.content
+            %td= notice.created_at.strftime "%Y-%m-%d %H:%M:%S"
+            %td= notice.deactivated.strftime "%Y-%m-%d %H:%M:%S"
+            %td
+              =button_to 'Delete', {action: 'notice_delete', id: notice.id}, {method: :delete}
+        - if Notice.where(active: false).order(created_at: :desc).empty?
+          %tr
+            %td{colspan: 5}
+              %b No past notices to display.

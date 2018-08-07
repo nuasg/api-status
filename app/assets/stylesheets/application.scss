@@ -1,0 +1,141 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree
+ *= require_self
+ */
+
+@import "bootstrap";
+
+div.status-top {
+  padding: 75px 0;
+  background-color: #86608E;
+  color: #eee;
+
+  @extend .mb-3;
+}
+
+div#api-status-content {
+  .card-columns, .notice {
+    max-width: 1040px;
+
+    @extend .mx-auto;
+  }
+
+  .notice {
+    @extend .mb-3;
+  }
+}
+
+footer {
+  background-color: #86608E;
+  padding: 20px 0;
+  color: #eee;
+
+  a, a:hover {
+    color: #e9c7fc;
+    text-decoration: none;
+  }
+}
+
+.history-container, .login-container, .admin-container, .results-container {
+  @extend .container-fluid;
+
+  .history, .admin, .results {
+    max-width: 1040px;
+
+    @extend .mx-auto;
+  }
+
+  .login {
+    max-width: 500px;
+
+    @extend .mx-auto;
+  }
+}
+
+.month-header {
+  @extend .d-inline-block;
+
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+}
+
+#netid, #password, #login {
+  @extend .form-control;
+}
+
+#netid, #password {
+  @extend .mb-2;
+}
+
+.month-header:not(:first-child) {
+  @extend .mt-4;
+}
+
+.button_to input[type="submit"] {
+  @extend .btn;
+  @extend .btn-sm;
+}
+
+.form-inline {
+  @extend .mb-4;
+}
+
+.form-inline input, .form-inline textarea, .form-inline select {
+  @extend .form-control;
+}
+
+.form-inline :not(:last-child) {
+  margin-right: 0;
+  margin-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 576px) {
+  .form-inline :not(:last-child) {
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+  }
+}
+
+.form-inline textarea {
+  height: 38px;
+  flex-grow: 2;
+}
+
+.history-button {
+  top: 5px;
+  right: 8px;
+
+  a, a:hover {
+    color: #eee;
+    text-decoration: none;
+  }
+}
+
+#update-request {
+  a, a:hover {
+    color: #eee;
+    text-decoration: none;
+  }
+}
+
+.admin-button {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+
+  a, a:hover {
+    color: #eee;
+    text-decoration: none;
+  }
+}

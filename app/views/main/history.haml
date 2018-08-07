@@ -1,0 +1,29 @@
+.status-top
+  .history-button.position-absolute
+    %a{href: '/'} Home
+  .text-center
+    %h1.mb-3
+      Course Data API Status History
+.history-container
+  .history
+    - c_month = nil
+    - all_notices_by_month.each do |notice|
+      - if c_month.nil?
+        - c_month ||= notice.created_at.strftime("%-m")
+        %h3.month-header.font-weight-light= notice.created_at.strftime("%B %Y")
+      - if c_month != notice.created_at.strftime("%-m")
+        - c_month = notice.created_at.strftime("%-m")
+        %h3.month-header.font-weight-light= notice.created_at.strftime("%B %Y")
+      .card.mb-2
+        .card-body
+          %h5.card-title.mb-2
+            = notice.title
+            = " (Not Resolved)" if notice.active
+          %h6.card-subtitle.text-muted.mb-3= notice.created_at.strftime("%A, %B %-d, %Y at %H:%M")
+          %p.card-text= notice.content
+        - unless notice.active
+          .card-footer.text-muted.text-left
+            Resolved on
+            = notice.deactivated.strftime "%A, %B %-d, %Y at %H:%M"
+    - if Notice.all.empty?
+      %h3.text-center No API status history to show.

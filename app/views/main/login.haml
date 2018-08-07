@@ -1,0 +1,19 @@
+.status-top
+  .text-center
+    %h1.mb-3
+      Course Data API Status Admin
+.login-container
+  .login
+    %h2.text-center.mb-3 Login
+    - unless flash[:warning].nil?
+      .alert.alert-warning
+        = flash[:warning]
+    .alert.alert-info
+      This is the login for the API status system. It is for administrators only. If you are attempting to manage your
+      own API projects, please visit&nbsp;
+      %a{href: "https://api.asg.northwestern.edu/manage/login"}> this link
+      \.
+    =form_tag do
+      =text_field_tag :netid, nil, placeholder: "NetID"
+      =password_field_tag :password, nil, placeholder: "NetID Password"
+      =submit_tag "Log In", id: "login"
