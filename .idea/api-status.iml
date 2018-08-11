@@ -30,12 +30,15 @@
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.9.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="chromedriver-helper (v1.2.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.0.5, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="crack (v0.4.3, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.4, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="docile (v1.3.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.7.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.25, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v5.0.4, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hashdiff (v0.3.7, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.0.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="io-like (v0.3.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.7.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
@@ -47,6 +50,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.0.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.3.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.11.3, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mock_redis (v0.19.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.2.4, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.13.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.5.2, Remote: ruby-2.5.1-p57) [gem]" level="application" />
@@ -55,6 +59,7 @@
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.8.4, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="northwestern-api (v0.0.3, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="popper_js (v1.14.3, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="power_assert (v1.1.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v3.0.2, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v3.12.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.0.5, Remote: ruby-2.5.1-p57) [gem]" level="application" />
@@ -69,19 +74,24 @@
     <orderEntry type="library" scope="PROVIDED" name="redis (v4.0.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby_dep (v1.5.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v1.2.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="safe_yaml (v1.0.4, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.5.7, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-listen (v4.0.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.7, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v3.14.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="simplecov (v0.16.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="simplecov-html (v0.10.2, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring (v2.0.2, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring-watcher-listen (v2.0.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v3.7.2, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.2.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="temple (v0.8.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="test-unit (v3.2.7, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.20.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.6, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v2.0.8, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="time_difference (v0.7.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="timecop (v0.9.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v5.1.1, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbolinks-source (v5.1.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="typescript-node (v1.6.2, Remote: ruby-2.5.1-p57) [gem]" level="application" />
@@ -90,6 +100,7 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.5, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v4.1.17, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v3.6.2, Remote: ruby-2.5.1-p57) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="webmock (v3.4.2, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.3, Remote: ruby-2.5.1-p57) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v3.1.0, Remote: ruby-2.5.1-p57) [gem]" level="application" />
