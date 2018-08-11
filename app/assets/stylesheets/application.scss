@@ -25,6 +25,8 @@ div.status-top {
 }
 
 div#api-status-content {
+  min-height: calc(100vh - 299px - 64px);
+
   .card-columns, .notice {
     max-width: 1040px;
 

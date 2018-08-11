@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_04_153728) do
+ActiveRecord::Schema.define(version: 2018_08_10_221212) do
 
   create_table "notices", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.text "title"
     t.text "content"
-    t.boolean "active"
+    t.boolean "active", default: true
     t.datetime "deactivated"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2018_08_04_153728) do
   create_table "test_results", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.datetime "time_run"
     t.string "name"
-    t.string "result"
+    t.integer "result"
     t.text "response", limit: 16777215
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

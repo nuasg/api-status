@@ -7,7 +7,7 @@
         %h3{style: "text-align: center;"} Test Failures
         %p{style: "text-align: center;"}
           Tests were run on the API at
-          = @time
+          = @timestamp
           and some resulted in failures. A breakdown of the results of the testing is available below.
         %table{width: "80%", border: "0", style: "border-collapse: collapse;", cellpadding: "5"}
           %tr
@@ -18,16 +18,16 @@
             %th{style: "border: 1px solid #000"} Details
           - @failures.each do |failure|
             %tr
-              %td{style: "border: 1px solid #000"}= @ids[failure["path"]][failure["name"]]
-              %td{style: "border: 1px solid #000"}= failure["name"]
+              %td{style: "border: 1px solid #000"}= failure.id
+              %td{style: "border: 1px solid #000"}= failure.name
               %td{style: "border: 1px solid #000"}
-                - if failure["result"] == "warn"
+                - if failure.result == "warn"
                   %span{style: "width: 10px; height: 10px; background-color: #FFC107; border-radius: 100px; display: inline-block;"}
-                - if failure["result"] == "fail"
+                - if failure.result == "fail"
                   %span{style: "width: 10px; height: 10px; background-color: #DC3545; border-radius: 100px; display: inline-block;"}
-                =failure["result"]
-              %td{style: "border: 1px solid #000"}= failure["message"]
-              %td{style: "border: 1px solid #000"}= link_to "Details", controller: :main, action: :view_results, id: @ids[failure["path"]][failure["name"]]
+                =failure.result
+              %td{style: "border: 1px solid #000"}= failure.message
+              %td{style: "border: 1px solid #000"}= link_to "Details", controller: :main, action: :view_results, id: failure.id
         %br
         %div{style: "background-color: #86608E; padding: 20px 40px; color: #bbb;"}
           You are receiving this email because you are listed as an admin of the Course Data API Status system.

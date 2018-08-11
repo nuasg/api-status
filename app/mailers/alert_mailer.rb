@@ -1,11 +1,12 @@
 class AlertMailer < ApplicationMailer
-  default from: 'alerts@api.asg.northwestern.edu'
+  default to: -> {User.where(admin: true).pluck(:email) << 'asg-technology@u.northwestern.edu'},
+          from: 'alerts@api.asg.northwestern.edu',
+          subject: 'Course Data API Test Failure Summary'
 
   def alert_email
     @failures = params[:failures]
-    @time = params[:timestamp]
-    @ids = params[:ids]
+    @timestamp = params[:timestamp]
 
-    mail(to: params[:to], subject: "Course Data API Test Failure Summary")
+    mail
   end
 end

@@ -1,57 +1,47 @@
 module MainHelper
-  def main_dot_type(tsts)
-    a = "dark"
-
-    tsts.each_value do |tst|
-      case a
-      when "dark"
-        a = "success" if tst[:type] == "pass"
-        a = "warning" if tst[:type] == "warn"
-        a = "danger" if tst[:type] == "fail"
-      when "success"
-        a = "warning" if tst[:type] == "warn"
-        a = "danger" if tst[:type] == "fail"
-      when "warning"
-        a = "danger" if tst[:type] == "fail"
-      else
-        break
-      end
-    end
-
-    a
-  end
-
-  def individual_dot_type(tst)
-    if tst[:type] == "pass"
-      "success"
-    elsif tst[:type] == "warn"
-      "warning"
-    elsif tst[:type] == "fail"
-      "danger"
+  def status(str)
+    case str
+    when 'dark'
+      'Tests have not yet run.'
+    when 'success'
+      'No issues are currently reported.'
+    when 'warning'
+      'Minor issues reported.'
+    when 'danger'
+      'Major issues reported.'
     else
-      "dark"
+      'Unknown status.'
     end
   end
 
-  def overall_status(res)
-    a = "dark"
+  def overall(results)
+    return map(nil) if results.empty? || results.length == 1
 
-    res.each_value do |tsts|
-      z = main_dot_type tsts
+    worst = 0
 
-      case a
-      when "dark"
-        a = z
-      when "success"
-        a = z if z == "danger" || z == "warning"
-      when "warning"
-        a = z if z == "danger"
-      else
-        break
-      end
+    results.each do |path, test_info|
+      next if path == '/data/age'
+
+      worst_category_str = test_info[:results][:worst]
+      worst_category = TestResult.results[worst_category_str]
+
+      worst = worst_category if worst_category > worst
     end
 
-    a
+    map TestResult.results.key(worst)
+  end
+
+  def map(str)
+    case str.to_s
+    when 'pass'
+      'success'
+    when 'warn'
+      'warning'
+    when 'fail'
+      'danger'
+    else
+      'dark'
+    end
   end
 
   def active_notices
@@ -60,5 +50,9 @@ module MainHelper
 
   def all_notices_by_month
     Notice.order(created_at: :desc)
+  end
+
+  def user
+    session[:user_id] ? User.find(session[:user_id]) : nil
   end
 end

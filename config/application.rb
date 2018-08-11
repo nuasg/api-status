@@ -12,7 +12,7 @@ module ApiStatus
     config.load_defaults 5.2
 
     config.action_mailer.smtp_settings = {
-        address: "smtp.gmail.com",
+        address: 'smtp.gmail.com',
         port: 587,
         user_name: 'asg-technology@u.northwestern.edu',
         password: ENV['ASG_TECH_EMAIL_PWD'],
@@ -29,7 +29,8 @@ module ApiStatus
     config.force_ssl = true
 
     if defined? Rails::Server
-      config.after_initialize do 
+      config.after_initialize do
+        Rails.application.reload_routes!
         RunTestsJob.perform_now false
       end
     end

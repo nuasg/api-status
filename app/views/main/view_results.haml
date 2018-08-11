@@ -10,7 +10,7 @@
           = @result.name
           %span.text-muted= "(#{@result.time_run.strftime "%Y-%m-%d %H:%M:%S"})"
         %h6.card-subtitle.text-muted
-          %span{class: "badge badge-pill badge-#{@map[@result.result]}"} &nbsp;
+          %span{class: "badge badge-pill badge-#{map @result.result}"} &nbsp;
           %b
             &nbsp;
             = @result.result.capitalize
