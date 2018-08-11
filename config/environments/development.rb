@@ -61,4 +61,5 @@ Rails.application.configure do
 
   config.web_console.whitelisted_ips = ['10.105.0.0/16', '83.147.235.85', '24.13.81.228']
   config.action_mailer.default_url_options = {:host => "api-status.dev.asg.northwestern.edu"}
+
 end
