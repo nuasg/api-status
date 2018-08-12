@@ -1,5 +1,12 @@
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  if ENV['TEAMCITY_VERSION']
+    at_exit do
+      SimpleCov::Formatter::TeamcitySummaryFormatter.new.format(SimpleCov.result)
+      # SimpleCov.result.format! # uncomment for additional detailed HTML report for TeamCity artifacts
+    end
+  end
+end
 
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'

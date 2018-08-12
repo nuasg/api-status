@@ -75,6 +75,7 @@ group :test do
   gem 'test-unit'
   gem 'timecop'
   gem 'sqlite3'
+  gem 'simplecov-teamcity-summary'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
