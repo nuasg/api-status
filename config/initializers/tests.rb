@@ -271,7 +271,7 @@ module Tests
                   :params => [
                       ['id', 150763]
                   ],
-                  :count => 'many',
+                  :count => 1,
                   :expect => {
                       :id => Integer,
                       :title => String,
